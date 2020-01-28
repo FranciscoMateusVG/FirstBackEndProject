@@ -11,7 +11,7 @@ const tableView = {
   renderNormalInput: (value, index) => {
     const { Investido, Tipo, Codigo, Setor } = value;
 
-    let template = `<tr class="rows${index}">
+    let template = `<tr class="${Codigo}" data-toggle="modal" data-target="#compraAcaoModal">
                     <td data-children-count="1" id="A1" class="text-center">${Codigo}</td>
                     <td data-children-count="1" id="B1" class="text-center">${Tipo}</td>
                     <td data-children-count="1" id="C1 class="text-center">${Setor}</td>
