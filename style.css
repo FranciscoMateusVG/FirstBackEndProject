@@ -1,0 +1,15 @@
+input:hover {
+  background-color: #eee;
+}
+
+input:focus {
+  background-color: #ccf;
+}
+
+input:not(:focus) {
+  text-align: right;
+}
+
+body {
+  height: 1500px;
+}

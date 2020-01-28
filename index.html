@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="container">
+      <div class="row justify-content-center pt-5">
+        <img src="./images/indexlogo.png" alt="" />
+        <h1 class="display-4 pt-5">- Stonks</h1>
+      </div>
+    </div>
+  
+   <!-- Spreadsheet -->
+
+    <div class="container mb-3 mt-3">
+      <table
+        id="tableSpreadSheet"
+        class="table table-striped table-bordered dataTable"
+        style="width: 100%;"
+        role="grid"
+      >
+        <thead class="columnHeader">
+          <tr class="column">
+            <th class="columnCSS baseIndex" id="A0" data-children-count="1">
+            </th>
+            <th class="columnCSS baseIndex" id="B0" data-children-count="1">
+            </th>
+            <th class="columnCSS baseIndex" id="C0" data-children-count="1">
+            </th>
+            <th class="columnCSS baseIndex" id="D0" data-children-count="1">
+              DISTRIBUIÇAO
+            </th>
+            <th class="columnCSS baseIndex" id="E0" data-children-count="1">
+              INVESTIDO
+            </th>
+          </tr>
+        </thead>
+        <tbody class="spreadSheet"></tbody>
+      </table>
+      <button type="button" name="" id="" data-toggle="modal" data-target="#insereAcaoModal" class="btn btn-primary" btn-lg btn-block">Nova Açao</button>
+    </div>
+   <!-- Modal -->
+<div class="modal fade" id="insereAcaoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+  
+                
+          <!-- Form -->
+
+          <div class="container">
+            <div class="card p-5 mt-3">
+              <h3>Nova Açao</h3>
+              <form class="row inputAcaoForm">
+                <div class="form-group col-6">
+                  <label for="nome">Nome</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="nomeAcao"
+                    class="form-control text-left column-title"
+                    placeholder="Nome da Açao"
+                    aria-describedby="helpId"
+                  />
+                </div>
+                <div class="form-group col-6">
+                  <label for="codigo">Código</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="codigoAcao"
+                    class="form-control text-left column-title"
+                    placeholder="Codigo da Açao"
+                    aria-describedby="helpId"
+                  />
+                </div>
+                <div class="form-group col-12">
+                  <label for="Setor">Setor</label>
+                  <input
+                    type="text"
+                    name=""
+                    id="setorAcao"
+                    class="form-control text-left column-title"
+                    placeholder="Setor da Açao"
+                    aria-describedby="helpId"
+                  />
+                </div>
+                <div class="form-group col-12">
+                  <label for="tipo">Tipo</label>
+                  <select class="form-control" name="tipoAcao" id="tipoAcao">
+                    <option>Açao</option>
+                    <option>Fundo Imobiliario</option>
+                  </select>
+                </div>
+              </form>
+
+
+            </div>
+          </div> 
+
+
+      </div>
+      <div class="modal-footer">
+          <!--  Insere Açao  --> 
+          <div class="container">
+            <div class="row justify-content-end">
+              <a
+                name="Create"
+                id="createColumn"
+                class="btn btn-success mr-3 "
+                href="#"
+                role="button"
+                >Inserir Açao</a
+              >
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- jQuery first, then Bootstrap JS, then App JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap4.min.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
+
