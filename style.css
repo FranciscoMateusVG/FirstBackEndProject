@@ -13,3 +13,7 @@ input:not(:focus) {
 body {
   height: 1500px;
 }
+
+td:hover {
+  cursor: pointer;
+}
