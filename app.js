@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const acoesRoutes = require('./api/routes/acoes');
+const http = require('http');
+const acoesRoutes = require('./api/routes/acoesRoutes');
 const morgan = require('morgan');
 const app = express();
 const mongoose = require('mongoose');
@@ -60,4 +61,12 @@ app.use((error, req, res, next) => {
   });
 });
 
-module.exports = app;
+//Mount Server
+
+const port = 8080;
+
+const server = http.createServer(app);
+
+server.listen(port, () => {
+  console.log(`Escutando na porta ${port}`);
+});

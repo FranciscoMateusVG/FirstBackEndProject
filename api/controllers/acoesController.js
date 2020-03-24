@@ -2,6 +2,7 @@ const Acao = require('../models/acao');
 
 //Busca todas as Açoes
 exports.getAcoes = (req, res) => {
+
   Acao.find((err, document) => {
     if (err) {
       console.log(err);
@@ -57,7 +58,7 @@ exports.buscaAcao = (req, res) => {
 exports.atualizaAcao = (req, res) => {
   const codigo = req.params.codigo;
 
-  Acao.findOne({ Codigo: codigo }, function(err, doc) {
+  Acao.findOne({ Codigo: codigo }, function (err, doc) {
     if (err) {
       console.log(err);
     } else {
@@ -75,7 +76,7 @@ exports.atualizaAcao = (req, res) => {
 //Deleta Açao
 exports.deletaAcao = (req, res) => {
   const codigo = req.params.codigo;
-  Acao.deleteOne({ Codigo: codigo }, function(err) {
+  Acao.deleteOne({ Codigo: codigo }, function (err) {
     if (err) {
       return handleError(err);
     } else {
