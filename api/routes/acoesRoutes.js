@@ -4,11 +4,12 @@ const acoesController = require('../controllers/acoesController');
 
 //Descontruct
 const {
-  getAcoes,
-  insereAcao,
-  buscaAcao,
-  atualizaAcao,
-  deletaAcao
+	getAcoes,
+	insereAcao,
+	buscaAcao,
+	atualizaAcaoAdicionando,
+	atualizaAcaoDeletando,
+	deletaAcao
 } = acoesController;
 
 //GET ALL
@@ -21,7 +22,8 @@ router.post('/', insereAcao);
 router.get('/:codigo', buscaAcao);
 
 //UPDATE
-router.put('/:codigo', atualizaAcao);
+router.put('/:nome', atualizaAcaoAdicionando);
+router.put('/deleta/:nome', atualizaAcaoDeletando);
 
 //DELETE
 router.delete('/:codigo', deletaAcao);
