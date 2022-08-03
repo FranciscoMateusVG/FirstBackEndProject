@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 // Using mongodb
 const mongodbURL =
-  'mongodb+srv://admin:Xeroknux1@zawarudo-saxte.gcp.mongodb.net/Minhas_Acoes?retryWrites=true&w=majority';
+  '';
 mongoose.connect(mongodbURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
